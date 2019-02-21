@@ -1,0 +1,20 @@
+<p>
+  Output uit Film-List-Item:
+</p>
+<div>
+  {{ film?.title }}
+  <pre>
+  <img src="{{ film?.poster }}" width=100 class="rounded float-left" class="rounded float-right" [routerLink]="'/film-details/' + film?.imdbId">
+  {{film?.year}}
+  {{film?.type}}
+  {{film?.imdbId}}
+  {{film?.rated}}
+  {{film?.released}}
+  {{film?.runtime}}
+  {{film?.genre}}
+  {{film?.website}}
+</pre>
+</div>
+
+<!-- <button class="btn btn-primary" [routerLink]="'/film-details/' + film.imdbId">details</button> -->
+<button class="btn btn-primary" (click)="orderFilm(film)">film bestellen</button>
